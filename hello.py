@@ -5,6 +5,7 @@ Description:
     Starter script for automating CAD workflows.
     - Reads part parameters from JSON input files
     - Prints part configuration for verification
+    - Scans multiple JSON input files in examples/
 """
 
 import json
@@ -15,24 +16,7 @@ def load_part(file_path):
     with open(file_path, "r") as f:
         return json.load(f)
 
-def main():
-    print(" CAD Automation Toolkit initialized!")
-
-    # Path to example file
-    example_file = os.path.join("examples", "bracket_example.json")
-
-    # Check if file exists
-    if os.path.exists(example_file):
-        part = load_part(example_file)
-        print("\n Part Configuration Loaded:")
-        for key, value in part.items():
-            print(f"  {key}: {value}")
-    else:
-        print("⚠ No example file found. Please add JSON input to /examples.")
-
-if __name__ == "__main__":
-    main()
-    def scan_examples():
+def scan_examples():
     """Scan all JSON files in the examples folder."""
     examples_folder = "examples"
 
@@ -58,9 +42,14 @@ def main():
     example_file = os.path.join("examples", "bracket_example.json")
     if os.path.exists(example_file):
         part = load_part(example_file)
-        print("\n📐 Part Configuration Loaded:")
+        print("\n📐 Single Part Configuration Loaded:")
         for key, value in part.items():
             print(f"  {key}: {value}")
+    else:
+        print("⚠️ No bracket_example.json found.")
 
     # Run new multi-file logic
     scan_examples()
+
+if __name__ == "__main__":
+    main()
