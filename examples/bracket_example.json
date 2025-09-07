@@ -1,0 +1,8 @@
+{
+  "part_name": "mounting_bracket",
+  "length_mm": 120,
+  "width_mm": 40,
+  "thickness_mm": 5,
+  "hole_diameter_mm": 10,
+  "material": "Aluminum 6061"
+}
