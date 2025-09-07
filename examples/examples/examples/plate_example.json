@@ -1,8 +1,0 @@
-{
-  "part_name": "base_plate",
-  "length_mm": 200,
-  "width_mm": 150,
-  "thickness_mm": 10,
-  "hole_diameter_mm": 12,
-  "material": "Stainless Steel 304"
-}
